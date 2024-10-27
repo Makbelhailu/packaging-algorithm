@@ -3,7 +3,7 @@ import itertools
 import random, json
 
 def create_package(items, budget):
-    # Sort items by price in asc order
+   
     items.sort(key=lambda x: x['price'])
     
     package = []
@@ -37,7 +37,7 @@ def create_package(items, budget):
     }
 
 def add_additional_items(package, items, remaining_budget):
-    # adding items that fit within the remaining budget
+   
     for item in sorted(items, key=lambda x: x['price']):
         if item not in package and item['price'] <= remaining_budget:
             package.append(item)
@@ -47,19 +47,19 @@ def add_additional_items(package, items, remaining_budget):
     return package, remaining_budget
 
 def create_multiple_packages(item_collection, budget, priorities, num_packages=3):
-    # Filter items based on user priorities
+    
     prioritized_items = [item for item in item_collection if any(priority.lower() in item['name'].lower() for priority in priorities)]
     
-    # error message if user cant afford the priority
+    
     not_affordable = [priority for priority in priorities if all(item['price'] > budget for item in prioritized_items)]
     
     packages = []
     
-    # Create an initial package with prioritized items within the budget
+    
     initial_package = create_package(prioritized_items, budget)
     
     if initial_package["total_price"] > 0:
-        # Add additional items based on the remaining budget
+        
         updated_package, remaining_budget = add_additional_items(initial_package["package"], item_collection, initial_package["remaining_budget"])
         
         packages.append({
@@ -77,18 +77,18 @@ def create_multiple_packages(item_collection, budget, priorities, num_packages=3
     
     all_combinations = []
     
-    # Generate combinations of different lengths (2 to the total number of items)
+    
     for r in range(2, len(item_collection) + 1):
         all_combinations.extend(itertools.combinations(item_collection, r))
     
-    # Randomly select combinations to create distinct packages
+    
     selected_combinations = random.sample(all_combinations, min(num_packages - 1, len(all_combinations)))
 
     for combination in selected_combinations:
         initial_package = create_package(list(combination), budget)
         
         if initial_package["total_price"] > 0:
-            # Try to add more items based on the remaining budget
+            
             updated_package, remaining_budget = add_additional_items(initial_package["package"], item_collection, initial_package["remaining_budget"])
             packages.append({
                 "total_price": sum(item['price'] for item in updated_package),
