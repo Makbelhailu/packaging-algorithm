@@ -3,22 +3,22 @@
 This project implements a packaging algorithm that helps create the best possible product packages based on user-defined priorities, budget, and available items. It generates multiple packages while ensuring that prioritized items are considered and any budget constraints are respected.
 Features
 
-    Create packages based on a specified budget and prioritized items.
-    Add additional items to the package within the remaining budget.
-    Provide error messages for prioritized items that cannot be afforded.
-    Generate multiple distinct packages based on the available item collection.
+  Create packages based on a specified budget and prioritized items.
+  Add additional items to the package within the remaining budget.
+  Provide error messages for prioritized items that cannot be afforded.
+  Generate multiple distinct packages based on the available item collection.
 
 ## Requirements
 
-    Python 3.x
-    No additional libraries are required.
+  Python 3.x
+  No additional libraries are required.
 
 ## Getting Started
 Clone the Repository
 
 To clone this repository, follow these steps:
 
-    1.Open your terminal (Command Prompt, PowerShell, or any terminal emulator).
+    1. Open your terminal (Command Prompt, PowerShell, or any terminal emulator).
 
     2. Navigate to the directory where you want to clone the project.
 
