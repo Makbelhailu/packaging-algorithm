@@ -1,4 +1,4 @@
-#E-commerce Packaging Algorithm
+# E-commerce Packaging Algorithm
 
 This project implements a packaging algorithm that helps create the best possible product packages based on user-defined priorities, budget, and available items. It generates multiple packages while ensuring that prioritized items are considered and any budget constraints are respected.
 Features
@@ -8,12 +8,12 @@ Features
     Provide error messages for prioritized items that cannot be afforded.
     Generate multiple distinct packages based on the available item collection.
 
-##Requirements
+## Requirements
 
     Python 3.x
     No additional libraries are required.
 
-##Getting Started
+## Getting Started
 Clone the Repository
 
 To clone this repository, follow these steps:
@@ -50,7 +50,7 @@ Enter your budget and priorities when prompted. The priorities should be comma-s
 
 The script will output the generated packages, including their total prices and messages regarding remaining budget or affordability of prioritized items.
 
-###Example
+### Example
 
 When you run the program with a budget of 1000 and priorities of mirror,desk,bed, the output might look like this:
 
@@ -81,6 +81,6 @@ Package 2:
 }
 ```
 
-##License
+## License
 
 This project is open source and available under the MIT License.
