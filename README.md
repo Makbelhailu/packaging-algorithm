@@ -18,11 +18,11 @@ Clone the Repository
 
 To clone this repository, follow these steps:
 
-    1. Open your terminal (Command Prompt, PowerShell, or any terminal emulator).
+  1. Open your terminal (Command Prompt, PowerShell, or any terminal emulator).
 
-    2. Navigate to the directory where you want to clone the project.
+  2. Navigate to the directory where you want to clone the project.
 
-    3. Run the following command:
+  3. Run the following command:
 
 ```bash
 
